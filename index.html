@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik amallar va Math obyekti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+            overflow: auto;
+            margin-top: 10px;
+        }
+        code {
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Matematik amallar va Math obyekti</h1>
+
+    <h2>Matematik amallar</h2>
+    <p>Matematik amallar bo'yicha alohida keltirib tushuntirilgan qo'llanma.</p>
+    <pre id="codeBlock1">
+        <code>
+// Matematik amallar
+let x = 5;
+let y = 1000;
+let sum = x + y; // Qo'shish
+let p = x * y; // Ko'paytirish
+let s = x / y; // Bolish
+let o = x % y; // Foyizga bolish
+let a = x - y; // Ayirish
+
+console.log("Qo'shish:", sum);
+console.log("Ko'paytirish:", p);
+console.log("Bolish:", s);
+console.log("Foyizga bolish:", o);
+console.log("Ayirish:", a);
+        </code>
+        <button class="copy-button" onclick="copyCode('codeBlock1')">Copy</button>
+    </pre>
+
+    <h2>Math obyekti</h2>
+    <p>`Math` obyektini tushunish bo'yicha alohida keltirib tushuntirilgan qo'llanma.</p>
+    <pre id="codeBlock2">
+        <code>
+// Math obyekti
+let x = 10;
+let y = 50;
+console.log("Eng katta son:", Math.max(x, y)); // Eng katta son
+console.log("Eng kichik son:", Math.min(x, y)); // Eng kichik son
+console.log("Random son:", Math.random()); // Tasodifiy son
+console.log("Floor son:", Math.floor(Math.random() * 50) + 1); // Eng kichik butun son
+console.log("Ceil son:", Math.ceil(Math.random() * 50) + 1); // Eng katta butun son
+console.log("Round son:", Math.round(Math.random() * 50) + 1); // Eng yaqin butun son
+console.log("Absolut son:", Math.abs(-10)); // Absolut qiymat
+        </code>
+        <button class="copy-button" onclick="copyCode('codeBlock2')">Copy</button>
+    </pre>
+
+    <script>
+        function copyCode(id) {
+            const codeBlock = document.getElementById(id);
+            const code = codeBlock.querySelector('code').innerText;
+
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+
+            tempTextArea.select();
+            document.execCommand('copy');
+
+            document.body.removeChild(tempTextArea);
+
+            alert('Kod nusxalandi!');
+        }
+    </script>
+</body>
+</html>
